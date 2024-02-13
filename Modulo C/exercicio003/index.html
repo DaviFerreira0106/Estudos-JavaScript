@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de operadores</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+
+        body {
+            background-color: lightgray;
+        }
+
+        h1 {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            display: inline;
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+        }
+
+        div {
+            display: inline;
+        }
+
+        input#botao {
+            width: 100px;
+            height: 30px;
+        }
+
+        div#resultado {
+            display: block;
+            padding: 20px;
+            margin-top: 10px;
+            margin-left: 140px;
+            background-color: white;
+            width: 100px;
+            height: 20px;
+            border: solid 2px black;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soma de dois valores</h1>
+    <input type="number" name="n1" id="in1" required placeholder="Digite o primeiro número">
+    <div>+</div>
+    <input type="number" name="n2" id="in2" required placeholder="Digite o segundo número">
+    <input id="botao" type="button" value="somar">
+    <div id="resultado">Resultado</div>
+    <script>
+        var botao = window.document.getElementById('botao');
+        botao.addEventListener('click', somar);
+
+        
+
+        function somar() {
+            var txtn1 = window.document.getElementById('in1');
+            var txtn2 = window.document.querySelector('input#in2');
+            var resultado = window.document.getElementById('resultado');
+
+            var n1 = Number(txtn1.value);
+            var n2 = Number(txtn2.value);
+            
+            var res = n1 + n2;
+            resultado.innerHTML = res
+        }
+    </script>
+</body>
+</html>
