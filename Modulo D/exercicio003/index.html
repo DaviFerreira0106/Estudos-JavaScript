@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: lightgray;
+        }
+
+        header {
+            background-image: linear-gradient(to right, rgb(0, 68, 255) 70%, lightgray);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.458);
+        }
+
+        main {
+            background-color: white;
+            margin: auto;
+            height: 500px;
+            width: 700px;
+            padding: 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        input#botao {
+            height: 30px;
+            width: 80px;
+            border-radius: 20px;
+        }
+
+        input#itxtvel {
+            height: 30px;
+            width: 100px;
+            border-radius: 10px;
+        }
+
+        div {
+            display: block;
+            background-color: lightgrey;
+            padding: 10px;
+            border-radius: 10px;
+            width: 400px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        div > p {
+            padding: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Multas por Velocidade</h1>
+    </header>
+    <main>
+        <label for="itxtvel">Velocidade do Veiculo (Km/h):</label>
+        <input type="number" name="txtvel" id="itxtvel" required placeholder="Digite a Velocidade do Veiculo" max="1000">
+        <input type="button" value="Verificar" id="botao">
+        <div id="res"></div>
+        <script>
+            // Ouvindo os eventos do button
+            var botao = window.document.getElementById('botao');
+            botao.addEventListener('click', calcular);// Quando clicado chama a função calcular;
+
+            function calcular(){
+                var res = window.document.querySelector('div#res');
+                var txtvel = window.document.querySelector('input#itxtvel');
+                var vel = Number(txtvel.value);
+
+                res.innerHTML = `Sua velocidade no veiculo é ${vel}Km/h`;
+                if(vel > 60) {
+                    res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!</p>`;
+                }
+                res.innerHTML += `<p>Dirija sempre com sinto de segurança!</p>`
+            }
+        </script>
+    </main>
+</body>
+</html>
