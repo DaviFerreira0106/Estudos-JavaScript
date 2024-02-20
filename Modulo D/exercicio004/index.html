@@ -6,6 +6,31 @@
     <title>IBGE</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Verificação de estrangeiros e Nativos</h1>
+    </header>
+    <main>
+        <label for="itxtpais">País onde nasceu:</label>
+        <input type="text" name="txtpais" id="itxtpais" required placeholder="Digite o pais onde nasceu">
+        <input type="button" value="Verificar" id="botao">
+        <div id="res"></div>
+        <script>
+            var botao = window.document.getElementById('botao');
+            botao.addEventListener('click', verificar);
+
+            function verificar() {
+                var txtpais = window.document.querySelector('input#itxtpais');
+                var pais = txtpais.value;
+                var resultado = window.document.querySelector('div#res');
+
+                resultado.innerHTML = `<p>O País que digitou foi <strong>${pais}</strong></p>`;
+                if(pais.toUpperCase() == 'BRASIL' || pais.toUpperCase() == 'BRA') {
+                    resultado.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`;
+                } else {
+                    resultado.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+                }
+            }
+        </script>
+    </main>
 </body>
 </html>
