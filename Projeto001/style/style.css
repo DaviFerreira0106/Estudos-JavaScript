@@ -24,6 +24,11 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.39);
 }
 
+div {
+    text-align: center;
+    padding: 10px;
+}
+
 footer {
     font-style: italic;
     color: white;
