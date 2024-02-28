@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data de Nascimento</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Data de Nascimento</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <form action="#" method="post" autocomplete="on">
+                <p>
+                    <label for="itxtano">Digite o Ano em que Nasceu:</label>
+                    <input type="number" name="txtano" id="itxtano" required placeholder="Ano de Nascimento">
+                </p>
+                <p>
+                    <label for="sexo">Digite seu sexo:</label>
+                    <label for="masc">Masculino</label>
+                    <input type="radio" name="sexo" id="masc" checked>
+                    <label for="fem">Feminino</label>
+                    <input type="radio" name="sexo" id="fem">
+                </p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </form>
+        </div>
+        <div id="resultado">
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Criado por Curso em Video</p>
+    </footer>
+    <script src="javaScript/idade.js"></script>
+</body>
+</html>
