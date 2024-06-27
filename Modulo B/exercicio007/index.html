@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com formatação de números</title>
+    <style>
+        body {
+            background-color: beige;
+            font: normal 16pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*
+            toFixed() -> coloca a quantidade de casas decimais
+            replace('','') -> troca um item por outro
+        */
+        var salario = window.prompt('Digite o valor do seu salário');
+        document.write(`Salário = ${Number(salario).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`);
+        document.write(`Salário = ${Number(salario).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}<br>`);
+        document.write(`Salário = ${Number(salario).toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}<br>`);
+    </script>
+</body>
+</html>

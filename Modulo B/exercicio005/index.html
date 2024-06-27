@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício004 de Javascript</title>
+    <style>
+        body {
+            background-color: bisque;
+            font: normal 16pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculos matematicos</h1>
+    <script>
+        /* Tipos de conversão de String -> Number
+            Number.parseInt()
+            Number.paserFloat()
+            Number() esse o proprio javaScript escolhe se será float ou int
+        */
+        var n1 = Number(window.prompt('Digite o primeiro número')/* pormpt sempre restona valor em string*/);
+        var n2 = Number(window.prompt('Digite o segundo número'))/* Conversão de string para Number*/;
+        var resultado = n1 + n2;
+        /* Tipos de conversão de Number -> String
+            String()
+            .toString()
+        */
+        window.alert(`A soma de ${n1} e ${n2} é igual a ${resultado.toString()}`);
+        window.alert(typeof String(resultado));
+    </script>
+</body>
+</html>
