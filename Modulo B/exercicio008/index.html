@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade com operadores relacionais</title>
+    <style>
+        body {
+            background-color: blanchedalmond;
+            font: normal 16pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var n1 = window.prompt('Digite um número');
+        var n2 = window.prompt('Digite o segundo número');
+        var resMaior = n1 > n2
+        var resMenor = n1 < n2
+        if(resMaior == true){
+            document.write(`O número ${n1} é maior que ${n2}<br>`);
+        }else if(resMenor == true){
+            document.write(`O número ${n1} é menor que ${n2}<br>`)
+        }else {
+            document.write(`O número ${n1} e ${n2} são identicos<br>`)
+        }
+        
+    </script>
+</body>
+</html>

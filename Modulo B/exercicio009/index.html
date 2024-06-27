@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade com operadores relacionais</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            font: normal 16pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var idade = window.prompt('Digite sua idade');
+        var sexo = window.prompt('Digite seu sexo');
+        var resIdade = idade >= 1 && idade < 18
+        var resSexoMasculino = sexo.toLowerCase() == 'menino' || sexo.toLowerCase() == 'masculino' || sexo.toLowerCase() == 'homem';
+        var resSexoFeminino = sexo.toLowerCase() == 'menina' || sexo.toLowerCase() == 'feminino' || sexo.toLowerCase() == 'mulher';
+        if(resIdade == true && resSexoMasculino == true){
+            document.write(`Você é um menino, que é menor de idade <br>`);
+        }else if(resIdade == false && resSexoMasculino == true){
+            document.write(`Você é um homem, e está na fase adulta <br>`);
+        }else if(resIdade == true && resSexoFeminino == true){
+            document.write(`Você é uma menina, que é menor de idade <br>`);
+        }else if(resIdade == false && resSexoFeminino == true){
+            document.write(`Você é uma mulher, e está na fase adulta <br>`);
+        }else {
+            document.write(`Sexo inválido, digite um sexo valido <br>`);
+        }
+    </script>
+</body>
+</html>
