@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilizando funções javaScript com listiners</title>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+
+        div#area {
+            background-color: aliceblue;
+            border: 1px solid black;
+            font: normal 16pt Arial;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        var div = window.document.getElementById('area');
+
+        //Metodo para escutar se o elemento sofreu alguma interação com o usuário
+        div.addEventListener('click', clicou);
+        div.addEventListener('mouseenter', entrou);
+        div.addEventListener('mouseout', saiu);
+
+        function clicou(){
+            div.innerText = 'Clicou!';
+            div.style.backgroundColor = 'red';
+        }
+
+        function entrou(){
+            div.innerText = 'Entrou!';
+            div.style.borderRadius = '10px';
+        }
+
+        function saiu(){
+            div.innerText = 'Saiu!';
+            div.style.borderRadius = '0px';
+            div.style.backgroundColor = 'aliceblue';
+        }
+    </script>
+</body>
+</html>
