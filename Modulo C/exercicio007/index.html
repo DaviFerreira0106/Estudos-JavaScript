@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador em javaScrit</title>
+    <style>
+        body {
+            background-color: azure;
+            font: normal 16pt Arial;
+        }
+        
+        input#txtn1 {
+            width: 100px;
+            font: normal 16pt Arial;
+        }
+
+        input#txtn2 {
+            width: 100px;
+            font: normal 16pt Arial;
+        }
+
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" id="buttonSomar">
+    <div id="res">
+        Resultado
+    </div>
+    <script>
+        var buttonSomar = window.document.getElementById('buttonSomar');
+        buttonSomar.addEventListener('click', somar);
+
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1');
+            var tn2 = window.document.getElementById('txtn2');
+            var divRes = window.document.getElementById('res');
+
+            //Covertendo valores vindo do input para number
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var s = n1 + n2;
+
+            divRes.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${s}</strong>`;
+        }
+    </script>
+</body>
+</html>
