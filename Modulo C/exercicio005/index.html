@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de javaScript com DOM - Click event</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        div#area {
+            background-color: azure;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            font: normal 16pt Arial;
+            line-height: 200px; /* Alinha o contuodo no meio do box em sentido vertical */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()"><!-- Utilizando função javaScript via HTML -->
+        Interaja...
+    </div>
+    <script>
+        var div = window.document.getElementById('area'); //OBS: Não recomendado fazer uma variavel assim fora da function
+        function clicar(){
+            div.innerText = 'Clicou!';
+            div.style.backgroundColor = 'red';
+        }
+        
+        function entrou(){
+            div.innerText = 'Entrou!'
+            div.style.borderRadius = '10px';
+        }
+
+        function saiu(){
+            div.innerText = 'Saiu!';
+            div.style.borderRadius = '0px';
+            div.style.backgroundColor = 'azure';
+        }
+    </script>
+</body>
+</html>
