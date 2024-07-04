@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+body {
+    background-color: azure;
+    font: normal 16pt Arial;
+}
+
+main {
+    margin: auto;
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    padding: 5px;
+}
+
+div#form {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+input#txtvel {
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    font: normal 16pt Arial;
+}
+
+input[type=submit] {
+    width: 100px;
+    height: 30px;
+    font: normal 13pt Arial;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+}
+
+div#res {
+    position: absolute;
+    width: 500px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}

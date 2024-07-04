@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Detran - Sistema de Velocidade</title>
+</head>
+
+<body>
+    <main>
+        <h1>Sistema de velocidade</h1>
+        <div id="form">
+            <label for="txtvel">Velocidade</label>
+            <input type="number" name="txtvel" id="txtvel">
+            <input type="submit" id="button" value="Verificar">
+        </div>
+        <div id="res">
+            <p></p>
+            <p></p>
+        </div>
+    </main>
+    <script>
+        var button = window.document.getElementById('button');
+        button.addEventListener('click', calcular);
+
+        function calcular() {
+            var txtvel = window.document.getElementById('txtvel');
+            var p1 = window.document.getElementsByTagName('p')[0];
+            var p2 = window.document.getElementsByTagName('p')[1];
+            var vel = Number(txtvel.value);
+            p1.innerHTML = `A velocidade registrada do veículo foi de ${vel}Km/h`;
+            if (vel > 60) {
+                p1.innerHTML += '<p>A velocidade estava acima do permitido. O veículo foi <strong>MULTADO</strong>!</p>';
+            }
+            p2.innerText = 'Use sempre cinto de segurança!';
+        }
+    </script>
+</body>
+
+</html>
