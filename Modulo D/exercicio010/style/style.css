@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+*{
+    font-family: 'Arial';
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #CDD6D0;
+    height: 100vh;
+}
+
+header {
+    background-color: #B87D4B;
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    color: #CDD6D0;
+}
+
+main {
+    background-color: white;
+    margin: auto;
+    width: 800px;
+    height: 65vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20vh;
+}
+
+div#form {
+    height: 20vh;
+    width: 760px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #B87D4B;
+    color: #CDD6D0;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+}

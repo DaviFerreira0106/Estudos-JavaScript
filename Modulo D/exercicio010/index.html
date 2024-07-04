@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Mundi</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Nacionalidade</h1>
+    </header>
+    <main>
+        <div id="form">
+            <label for="txtpais">Informe o país em que está</label>
+            <input type="text" name="txtpais" id="txtpais">
+            <input type="button" value="Consultar">
+        </div>
+        <div id="res">
+        </div>
+    </main>
+    <footer>
+        <p>Site criado por Davi Ferreira - 2024</p>
+    </footer>
+    <script>
+        var button = window.document.querySelector('input[type=button]');
+        button.addEventListener('click', consultar);
+
+        function consultar(){
+            var txtpais = window.document.querySelector('input#txtpais');
+            var res = window.document.querySelector('div#res');
+            var pais = txtpais.value;
+            if(pais.toLowerCase() == 'brasil'){
+                res.innerHTML = `<p>O país em que você se encontra é <strong>${pais}</strong></p>`;
+                res.innerHTML += `<p>Você é Brasileiro</p>`;
+            }else {
+                res.innerHTML = `<p>O país em que você se encontra é <strong>${pais}</strong></p>`;
+                res.innerHTML += `<p>Você é Estrangeiro</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
