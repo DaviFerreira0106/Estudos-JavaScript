@@ -11,12 +11,17 @@ header {
 }
 
 section {
-    width: 700px;
+    width: 500px;
     margin: auto;
     background-color: white;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+div {
+    text-align: center;
+    padding: 8px;
 }
 
 footer {
