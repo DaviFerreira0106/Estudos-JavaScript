@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(85, 144, 246);
+    font: normal 14pt Arial;
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+section {
+    width: 700px;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+}
+
+input[type=number] {
+    font-size: 14pt;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+input[type=button] {
+    width: 100px;
+    height: 30px;
+    font-size: 14pt;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+}
+
+footer {
+    color: white;
+    text-align: center;
+}
