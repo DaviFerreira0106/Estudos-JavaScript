@@ -26,9 +26,15 @@ function contar() {
             res.innerHTML = res.innerHTML + `${numInicio} &#x1F449;`;
         }
         res.innerHTML = res.innerHTML + ` &#x1F3C1; `;
-    } else {
+    } else if(numInicio < numFim) {
         text.innerHTML = '<p>Contando: </p>';
         for (numInicio; numInicio <= numFim; numInicio = numInicio + numPasso) {
+            res.innerHTML = res.innerHTML + `${numInicio} &#x1F449; `;
+        }
+        res.innerHTML = res.innerHTML + ` &#x1F3C1; `;
+    } else {
+        text.innerHTML = `<p>Constando: </p>`;
+        for(numInicio; numInicio >= numFim; numInicio = numInicio - numPasso) {
             res.innerHTML = res.innerHTML + `${numInicio} &#x1F449; `;
         }
         res.innerHTML = res.innerHTML + ` &#x1F3C1; `;
