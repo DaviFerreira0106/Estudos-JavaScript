@@ -35,6 +35,8 @@ function adicionar() {
             p5.innerHTML = '';
             arrayNum.sort();
         }
+        txtNumero.value = '';
+        txtNumero.focus();
 
     }
 }
