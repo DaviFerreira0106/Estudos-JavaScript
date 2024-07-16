@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+body {
+    font: normal 16pt Arial;
+    background-color: rgb(64, 145, 238);
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+section {
+    background-color: white;
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    padding: 8px;
+}
+
+input[type=number] {
+    font-size: 16pt;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+input#buttonA {
+    font-size: 14pt;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 100px;
+}
+
+input#buttonA:hover {
+    background-color: dimgray;
+    color: white;
+}
+
+/* select#select {
+    width: 200px;
+    height: 150px;
+} */
+
+input#buttonF {
+    font-size: 14pt;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    height: 30px;
+    width: 100px;
+}
+
+input#buttonF:hover {
+    background-color: dimgray;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    color: white;
+}
